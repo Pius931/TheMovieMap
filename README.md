@@ -50,7 +50,7 @@ Trailers are embedded from YouTube, and future updates may include links that re
 
 ## Live Demo
 
-_(Optional: add deployment link later)_
+[click here](https://themoviemap.vercel.app/)
 
 ---
 
