@@ -1,16 +1,66 @@
-# React + Vite
+# TheMovieMap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TheMovieMap is a modern React application that allows users to discover movies, search for titles, view detailed information, and watch official trailers using data from the TMDB API.
 
-Currently, two official plugins are available:
+This project was built as part of my frontend portfolio to demonstrate real-world React skills, API integration, and UI/UX considerations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search for movies by title
+- View popular movies with pagination
+- Movie details page (overview, ratings, release date)
+- Watch official movie trailers (YouTube embeds)
+- Dark & Light mode toggle with animation
+- Fully responsive design (mobile-first)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React**
+- **React Router**
+- **JavaScript (ES6+)**
+- **CSS**
+- **TMDB API**
+
+---
+
+## API Used
+
+This app uses the **The Movie Database (TMDB) API** to fetch:
+
+- Popular movies
+- Search results
+- Movie details
+- Official trailers
+
+> TMDB does not provide downloadable movies — only metadata and trailers.
+
+---
+
+## Important Note
+
+This application **does not host or stream movies**.
+
+Trailers are embedded from YouTube, and future updates may include links that redirect users to official streaming platforms such as Netflix, Amazon Prime Video, or Apple TV, where the content is legally available.
+
+---
+
+## Live Demo
+
+_(Optional: add deployment link later)_
+
+---
+
+## Author
+
+**Pius Olumide**  
+Frontend Developer
+
+---
+
+## License
+
+This project is for educational and portfolio purposes.

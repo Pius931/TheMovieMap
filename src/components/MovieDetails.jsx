@@ -7,6 +7,7 @@ const MovieDetails = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [trailerKey, setTrailerKey] = useState("");
+  const [providers, setProviders] = useState([]);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -40,6 +41,28 @@ const MovieDetails = () => {
       if (trailer) {
         setTrailerKey(trailer.key);
       }
+
+      // Fetch Watch Providers
+      const fetchWatchProviders = async () => {
+        try {
+          const res = await fetch(
+            `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${API_KEY}`,
+          );
+          const data = await res.json();
+
+          // Pick a country (USA)
+          const country = data.results?.US;
+
+          if (country?.flatrate) {
+            setProviders(country.flatrate);
+          } else {
+            setProviders([]);
+          }
+        } catch (error) {
+          console.error("Failed to fetch watch providers", error);
+        }
+      };
+      fetchWatchProviders();
     };
 
     fetchMovieDetails();
@@ -88,6 +111,25 @@ const MovieDetails = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
+        </div>
+      )}
+
+      {/**Watch Providers */}
+      {providers.length > 0 && (
+        <div className="watch-providers">
+          <h3>Where to Watch</h3>
+
+          <div className="providers-list">
+            {providers.map((provider) => (
+              <div key={provider.provider_id} className="provider">
+                <img
+                  src={`https://image.tmdb.org/t/p/w92${provider.logo_path}`}
+                  alt={provider.provider_name}
+                  title={provider.provider_name}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

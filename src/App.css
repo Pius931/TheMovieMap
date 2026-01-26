@@ -281,6 +281,30 @@ body {
   animation: spin 1s linear infinite;
   margin: 40px auto;
 }
+
+/* Watch Providers */
+
+.watch-providers {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.providers-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.provider img {
+  width: 50px;
+  height: auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .details-container {
