@@ -57,7 +57,7 @@ Trailers are embedded from YouTube, and future updates may include links that re
 ## Author
 
 **Pius Olumide**  
-Frontend Developer
+
 
 ---
 
